@@ -1,10 +1,21 @@
+from zoneinfo import available_timezones
+
+
 class Book:
     def __init__(self, id: int, name: str, publisher: str, gender: str):
         self.__id = id
         self.__name = name
         self.__publisher = publisher
         self.__gender = gender
+        self.__available = True
 
+    @property
+    def available(self):
+        return self.__available
+
+    @available.setter
+    def available(self, value):
+        self.__available = value
 
     @property
     def id(self):
