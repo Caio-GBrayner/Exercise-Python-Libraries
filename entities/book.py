@@ -33,3 +33,14 @@ class Book:
     @gender.setter
     def gender(self, gender: str):
         __gender = gender
+
+    def to_dict(self):
+        return {
+            "id": self.__id,
+            "name": self.__name,
+            "publisher": self.__publisher,
+            "gender": self.__gender
+        }
+
+def __str__(self):
+    return f"ID: {self.__id}, Name: {self.__name}, Publisher: {self.__publisher}, Gender: {self.__gender}"

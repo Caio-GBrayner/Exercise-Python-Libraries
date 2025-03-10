@@ -33,3 +33,14 @@ class Member:
     @phone.setter
     def phone(self, phone: str):
         __phone = phone
+
+    def to_dict(self):
+        return {
+            "id": self.__id,
+            "name": self.__name,
+            "email": self.__email,
+            "phone": self.__phone
+        }
+
+    def __str__(self):
+        return f"ID: {self.__id}, Name: {self.__name}, Email: {self.__email}, Phone: {self.__phone}"
