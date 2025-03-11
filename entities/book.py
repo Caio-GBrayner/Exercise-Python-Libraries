@@ -2,9 +2,9 @@ from zoneinfo import available_timezones
 
 
 class Book:
-    def __init__(self, id: int, name: str, publisher: str, gender: str):
+    def __init__(self, id: int, title: str, publisher: str, gender: str):
         self.__id = id
-        self.__name = name
+        self.__title = title
         self.__publisher = publisher
         self.__gender = gender
         self.__available = True
@@ -23,11 +23,11 @@ class Book:
 
     @property
     def name(self):
-        return self.__name
+        return self.__title
 
     @name.setter
-    def name(self, name: str):
-        __name = name
+    def name(self, title: str):
+        __title = title
 
     @property
     def publisher(self):
@@ -48,7 +48,7 @@ class Book:
     def to_dict(self):
         return {
             "id": self.__id,
-            "name": self.__name,
+            "name": self.__title,
             "publisher": self.__publisher,
             "gender": self.__gender
         }
