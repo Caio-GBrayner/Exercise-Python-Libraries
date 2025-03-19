@@ -12,3 +12,5 @@ class DuplicateNameError(Exception):
 
 class DuplicatePasswordError(Exception):
     """Password already exist."""
+    pass
+
